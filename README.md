@@ -1,2 +1,2 @@
 # TextMining
-Yelp Reviews 
+Yelp Reviews Dataset

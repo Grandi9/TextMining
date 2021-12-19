@@ -16,5 +16,5 @@ The sample data is in unstructured format on which I have performed analysis on 
 * Distribution of reviews across postal codes
 
 ### Star Rating:
-
+![StarDist](https://user-images.githubusercontent.com/22790699/146667182-79616a4b-276c-4660-9585-04b67d099d8d.PNG)
 

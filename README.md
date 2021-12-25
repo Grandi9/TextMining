@@ -2,7 +2,7 @@
 
 I have built sentiment analsysis models on the Yelp Reviews.
 
-## Yelp Data Description :
+## Yelp Data Description
 
 * The Yelp dataset is available in json files and consists of review data files and business data files for the scope of this project.
 * The review data files include reviews with attributes such as review id, business id, business name, the review text, star rating, etc. 
@@ -15,6 +15,15 @@ The sample data is in unstructured format on which I have performed analysis on 
 * Distribution of reviews across states
 * Distribution of reviews across postal codes
 
-### Star Rating:
-![StarDist](https://user-images.githubusercontent.com/22790699/146667182-79616a4b-276c-4660-9585-04b67d099d8d.PNG)
+I have then explored the distribution of the star ratings based on an occurrence of a particular word. 
+
+For example, the higher star ratings have lesser usage of the word funny.
+Whereas the comments regarding the word cool increase from ratings 1 to 4 with a slight drop in ratings at rating 5. 
+And for the word ‘useful’ comments increase from ratings 1 to 3 and then drop from rating 3 to 5.
+
+## Data Cleaning
+
+Rare Words : These are the words which are not present in at least 10 reviews using antijoin.
+
+I have then removed the words containing digits(0-9) and stop words.
 

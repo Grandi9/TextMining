@@ -23,7 +23,23 @@ And for the word ‘useful’ comments increase from ratings 1 to 3 and then dro
 
 ## Data Cleaning
 
-Rare Words : These are the words which are not present in at least 10 reviews using antijoin.
+* Rare Words : These are the words which are not present in at least 10 reviews using antijoin.
+* I have then removed the words containing digits(0-9) and stop words.
 
-I have then removed the words containing digits(0-9) and stop words.
+## Dictionaries used
 
+### Bing
+* The sentiment analysis divides the words as positive and negative. I have counted the total occurrences of these words in the restaurant reviews. An inner join with the sentiment dictionary word list and tokenized restaurant reviews have been taken to capture the sentiment analysis. 
+* The accuracy is around 83%. The specificity is 91.59% and sensitivity is 64.90%
+
+
+### NRC 
+* It assigns words into one or more of the following ten categories: positive, negative, anger, anticipation, disgust, fear, joy, sadness, surprise, and trust. I have then taken the inner join with our tokenized reviews.
+* The accuracy is 78.67%. And sensitivity is 63.95% and specificity is 80.96%
+
+### AFINN
+* Assigns words with a score that runs between -5 and 5, with negative scores indicating negative sentiment and positive scores indicating positive sentiment.
+* The accuracy is 84.16%. The sensitivity is 70.59% and specificity is 87.99%.
+
+
+## Models

@@ -53,6 +53,8 @@ I used lemmatization because while using dictionaries the exact words are needed
 * Another approach is to look at a term’s Inverse Document Frequency (IDF), which decreases the weight for commonly used words and increases the weight for words that are not used very much in a collection of documents. 
 * This can be combined with term frequency to calculate a term’s TF-IDF (the two quantities multiplied together), the frequency of a term adjusted for how rarely it is used. The statistic tf-idf is intended to measure how important a word is to a document in a collection (or corpus) of documents, for example, to one novel in a collection of novels or to one website in a collection of websites.
 * For building models I have created Document Term Matrix - DTM using TF-IDF so that we can have structured form for our text data. Rows in DTM are Reviews and Columns are words. 
+![DocMatrix](https://user-images.githubusercontent.com/22790699/147393673-5561cf6b-d9a2-4d1a-a568-c7c4c9c8d696.PNG)
+
 
 ## Models
 

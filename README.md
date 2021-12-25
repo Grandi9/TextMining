@@ -24,7 +24,7 @@ And for the word ‘useful’ comments increase from ratings 1 to 3 and then dro
 ## Data Cleaning
 
 * Rare Words : These are the words which are not present in at least 10 reviews using antijoin.
-* I have then removed the words containing digits(0-9) and stop words.
+* I have then removed the words containing digits(0-9), rare words and stop words (an, a, the).
 
 ## Dictionaries used
 

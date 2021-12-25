@@ -43,3 +43,12 @@ And for the word ‘useful’ comments increase from ratings 1 to 3 and then dro
 
 
 ## Models
+
+### Random Forest Model on the combined dictionary:
+![rf-total](https://user-images.githubusercontent.com/22790699/147393603-636c2b39-4d86-4b1e-b5dc-a3cef921721e.PNG)
+
+### Naive Bayes Model on the combined dictionary:
+![Naivebayes-total;](https://user-images.githubusercontent.com/22790699/147393604-a2f89905-1092-430a-b058-5d5c6e5a47da.PNG)
+
+### SVM model on the combined dictionary:
+![SVM-total](https://user-images.githubusercontent.com/22790699/147393606-c5d9d66c-7649-4a1b-9dc6-4376ad620916.PNG)

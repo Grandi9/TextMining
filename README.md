@@ -22,6 +22,8 @@ Whereas the comments regarding the word cool increase from ratings 1 to 4 with a
 And for the word ‘useful’ comments increase from ratings 1 to 3 and then drop from rating 3 to 5.
 
 ## Data Cleaning
+We first tokenize the words using unnest_tokens fucntion.
+Tokensizing the words, retains all other attributes.
 
 * Rare Words : These are the words which are not present in at least 10 reviews using antijoin.
 * I have then removed the words containing digits(0-9), rare words and stop words (an, a, the).

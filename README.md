@@ -4,9 +4,9 @@ I have built sentiment analysis models on the Yelp Reviews.
 
 ## Yelp Data Description
 
-* The Yelp dataset is available in json files and consists of review data files and business data files for the scope of this project.
+* The Yelp dataset is available in JSON files and consists of review data files and business data files for the scope of this project.
 * The review data files include reviews with attributes such as review id, business id, business name, the review text, star rating, etc. 
-* The Business data files include attributes such as business name, address,business id,etc.
+* The Business data files include attributes such as business name, address, business id, etc.
 
 ## Data Exploration 
 
@@ -23,21 +23,21 @@ And for the word ‘useful’ comments increase from ratings 1 to 3 and then dro
 
 ## Data Cleaning and Processing
 * I first tokenized the words using the unnest_tokens function. Tokenizing the words retains all other attributes.
-* Rare Words : These are the words which are not present in at least 10 reviews using antijoin.
-* I have then removed the words containing digits(0-9), rare words and stop words (an, a, the).
-* Then, I have perfomed EDA on the word - star distribution.
+* Rare Words: These are the words that are not present in at least 10 reviews using antijoin.
+* I have then removed the words containing digits(0-9), rare words, and stop words (an, a, the).
+* Then, I have performed EDA on the distribution between words and stars.
 
 
 ### Stemming or Lemmatization?
 
 I used lemmatization because while using dictionaries the exact words are needed for a match. Also, the root words are reduced by stemming and if used with dictionaries then we might lose on obtaining the word sentiment as the word would be removed in its root form in the original Yelp dataset after stemming.
 
-### Term frequency, tfidf:
+### Term frequency, tf-idf:
 
-* One measure of how important a word may be is, how frequently a word occurs in a document which is called Term Frequency (TF).
+* One measure of how important a word maybe is, how frequently a word occurs in a document which is called Term Frequency (TF).
 * Another approach is to look at a term’s Inverse Document Frequency (IDF), which decreases the weight for commonly used words and increases the weight for words that are not used very much in a collection of documents. 
 * This can be combined with term frequency to calculate a term’s TF-IDF (the two quantities multiplied together), the frequency of a term adjusted for how rarely it is used. The statistic tf-idf is intended to measure how important a word is to a document in a collection (or corpus) of documents, for example, to one novel in a collection of novels or to one website in a collection of websites.
-* For building models I have created Document Term Matrix - DTM using TF-IDF so that we can have structured form for our text data. Rows in DTM are Reviews and Columns are words. 
+* For building models, I have created Document Term Matrix - DTM using TF-IDF so that we can have a structured form for our text data. Rows in DTM are Reviews and Columns are words. 
 ![DocMatrix](https://user-images.githubusercontent.com/22790699/147393673-5561cf6b-d9a2-4d1a-a568-c7c4c9c8d696.PNG)
 
 ## Dictionaries used

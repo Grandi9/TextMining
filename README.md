@@ -66,3 +66,7 @@ I used lemmatization because while using dictionaries the exact words are needed
 
 ### SVM model on the combined dictionary:
 ![SVM-total](https://user-images.githubusercontent.com/22790699/147393606-c5d9d66c-7649-4a1b-9dc6-4376ad620916.PNG)
+
+
+## References: 
+https://www.tidytextmining.com/tidytext.html

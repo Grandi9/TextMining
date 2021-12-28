@@ -21,12 +21,24 @@ For example, the higher star ratings have lesser usage of the word funny.
 Whereas the comments regarding the word cool increase from ratings 1 to 4 with a slight drop in ratings at rating 5. 
 And for the word ‘useful’ comments increase from ratings 1 to 3 and then drop from rating 3 to 5.
 
-## Data Cleaning
-We first tokenize the words using unnest_tokens fucntion.
-Tokensizing the words, retains all other attributes.
-
+## Data Cleaning and Processing
+* I first tokenized the words using the unnest_tokens function. Tokenizing the words retains all other attributes.
 * Rare Words : These are the words which are not present in at least 10 reviews using antijoin.
 * I have then removed the words containing digits(0-9), rare words and stop words (an, a, the).
+* Then, I have perfomed EDA on the word - star distribution.
+
+
+### Stemming or Lemmatization?
+
+I used lemmatization because while using dictionaries the exact words are needed for a match. Also, the root words are reduced by stemming and if used with dictionaries then we might lose on obtaining the word sentiment as the word would be removed in its root form in the original Yelp dataset after stemming.
+
+### Term frequency, tfidf:
+
+* One measure of how important a word may be is, how frequently a word occurs in a document which is called Term Frequency (TF).
+* Another approach is to look at a term’s Inverse Document Frequency (IDF), which decreases the weight for commonly used words and increases the weight for words that are not used very much in a collection of documents. 
+* This can be combined with term frequency to calculate a term’s TF-IDF (the two quantities multiplied together), the frequency of a term adjusted for how rarely it is used. The statistic tf-idf is intended to measure how important a word is to a document in a collection (or corpus) of documents, for example, to one novel in a collection of novels or to one website in a collection of websites.
+* For building models I have created Document Term Matrix - DTM using TF-IDF so that we can have structured form for our text data. Rows in DTM are Reviews and Columns are words. 
+![DocMatrix](https://user-images.githubusercontent.com/22790699/147393673-5561cf6b-d9a2-4d1a-a568-c7c4c9c8d696.PNG)
 
 ## Dictionaries used
 
@@ -42,20 +54,6 @@ Tokensizing the words, retains all other attributes.
 ### AFINN
 * Assigns words with a score that runs between -5 and 5, with negative scores indicating negative sentiment and positive scores indicating positive sentiment.
 * The accuracy is 84.16%. The sensitivity is 70.59% and specificity is 87.99%.
-
-## Data Processing
-
-### Stemming or Lemmatization?
-
-I used lemmatization because while using dictionaries the exact words are needed for a match. Also, the root words are reduced by stemming and if used with dictionaries then we might lose on obtaining the word sentiment as the word would be removed in its root form in the original Yelp dataset after stemming.
-
-### Term frequency, tfidf, and other measures:
-
-* One measure of how important a word may be is, how frequently a word occurs in a document which is called Term Frequency (TF).
-* Another approach is to look at a term’s Inverse Document Frequency (IDF), which decreases the weight for commonly used words and increases the weight for words that are not used very much in a collection of documents. 
-* This can be combined with term frequency to calculate a term’s TF-IDF (the two quantities multiplied together), the frequency of a term adjusted for how rarely it is used. The statistic tf-idf is intended to measure how important a word is to a document in a collection (or corpus) of documents, for example, to one novel in a collection of novels or to one website in a collection of websites.
-* For building models I have created Document Term Matrix - DTM using TF-IDF so that we can have structured form for our text data. Rows in DTM are Reviews and Columns are words. 
-![DocMatrix](https://user-images.githubusercontent.com/22790699/147393673-5561cf6b-d9a2-4d1a-a568-c7c4c9c8d696.PNG)
 
 
 ## Models

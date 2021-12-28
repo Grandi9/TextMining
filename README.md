@@ -1,6 +1,6 @@
 # TextMining
 
-I have built sentiment analsysis models on the Yelp Reviews.
+I have built sentiment analysis models on the Yelp Reviews.
 
 ## Yelp Data Description
 

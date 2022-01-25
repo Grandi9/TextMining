@@ -2,6 +2,8 @@
 
 I have built sentiment analysis models on the Yelp Reviews.
 
+Please look at the .rmd file in the same repository for the R code used to generate this analysis and built these models  -https://github.com/Grandi9/TextMining/blob/main/TextMining.Rmd
+
 ## Yelp Data Description
 
 * The Yelp dataset is available in JSON files and consists of review data files and business data files for the scope of this project.
